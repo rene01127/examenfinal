@@ -1,14 +1,41 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+<ion-header style="background-color: #4A7C59">
+  <ion-navbar style="background-color: #4A7C59">
+    <ion-title style="background-color: #4A7C59">
+      Arboles
     </ion-title>
+    <ion-buttons end>
+      <button (click)="getPicture()" ion-button icon-only>
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color: #7698B3">
+ <ion-card *ngFor = "let imagen of items">
+   <img src = {{imagen.url}}>
+   <ion-card-content>
+
+     <ion-item>
+        <h1>Tipo de Árbol</h1>
+        {{imagen.tipo}}
+     </ion-item>
+
+     <ion-item>
+        <h1>Ancho del Tronco</h1>
+        {{imagen.tronco}}
+     </ion-item>
+
+     <ion-item>
+        <h1>Ancho de la Copa</h1>
+        {{imagen.copa}}
+     </ion-item>
+
+     <ion-item>
+        <h1>Localización</h1>
+        Latitud: {{imagen.lat}}
+        Longitud: {{imagen.lon}}
+     </ion-item>
+   </ion-card-content>
+ </ion-card>
 </ion-content>

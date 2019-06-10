@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ImagenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header style="background-color: #4A7C59">
+  <ion-navbar style="background-color: #4A7C59">
+    <ion-title style="background-color: #4A7C59">imagen</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #7698B3">
+  <img src={{imagen}}>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Tipo de Arbol</ion-label>
+      <ion-input type="text" [(ngModel)]="tipo"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label stacked>Ancho de copa</ion-label>
+      <ion-input type="text" [(ngModel)]="copa"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Ancho de tronco</ion-label>
+      <ion-input type="text" [(ngModel)]="tronco"></ion-input>
+    </ion-item>
+    
+  </ion-list>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input placeholder="comentario" [(ngModel)]="comentario"></ion-input>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="subirImagen()">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
